@@ -1,0 +1,25 @@
+/* Browser reset for fullsize canvas */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Removes the scroll nav */
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* important for removing the default outline when you select something on Chrome for example. */
+    outline: none;
+}
+
+/* 
+    Makes the page impossible to scroll. Useful for MacOS trackpads for example.
+    That little bounce they do when you scroll past the limit...
+ */
+html,
+body
+{
+    overflow: hidden;
+}
