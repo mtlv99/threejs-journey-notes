@@ -49,9 +49,9 @@ mesh.rotation.reorder('YXZ');
  * Sizes
  */
 const sizes = {
-    width: 800,
-    height: 600
-}
+  width: 800,
+  height: 600,
+};
 
 /**
  * Camera
@@ -66,8 +66,8 @@ scene.add(camera);
 // Axes Helper
 // Enables a debug line at the center of the scene.
 // I wonder if can use it for other objects??
- const axesHelper = new THREE.AxesHelper(2);
- scene.add(axesHelper);
+const axesHelper = new THREE.AxesHelper(2);
+scene.add(axesHelper);
 
 
 // Useful Vector3 methods
@@ -85,38 +85,38 @@ console.log(mesh.position.normalize());
 /**
  * Groups
  */
- const group = new THREE.Group();
- group.position.z = -2;
- group.scale.y = 2;
+const group = new THREE.Group();
+group.position.z = -2;
+group.scale.y = 2;
 //  group.rotation.y = -0.2
- scene.add(group)
- 
- const cube1 = new THREE.Mesh(
-     new THREE.BoxGeometry(1, 1, 1),
-     new THREE.MeshBasicMaterial({ color: 0x00ff00 })
- );
- cube1.position.x = - 1.5;
- group.add(cube1);
- 
- const cube2 = new THREE.Mesh(
-     new THREE.BoxGeometry(1, 1, 1),
-     new THREE.MeshBasicMaterial({ color: 0xff00ff })
- );
- cube2.position.x = 0;
- group.add(cube2);
- 
- const cube3 = new THREE.Mesh(
-     new THREE.BoxGeometry(1, 1, 1),
-     new THREE.MeshBasicMaterial({ color: 0x0000ff })
- );
- cube3.position.x = 1.5;
- group.add(cube3);
+scene.add(group);
+
+const cube1 = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshBasicMaterial({ color: 0x00ff00 }),
+);
+cube1.position.x = -1.5;
+group.add(cube1);
+
+const cube2 = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshBasicMaterial({ color: 0xff00ff }),
+);
+cube2.position.x = 0;
+group.add(cube2);
+
+const cube3 = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshBasicMaterial({ color: 0x0000ff }),
+);
+cube3.position.x = 1.5;
+group.add(cube3);
 
 /**
  * Renderer
  */
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas
+  canvas,
 });
 renderer.setSize(sizes.width, sizes.height);
 renderer.render(scene, camera);

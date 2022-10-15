@@ -1,0 +1,33 @@
+{
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  },
+  "name": "threejs-journey-lessons",
+  "version": "1.0.0",
+  "description": "Marco's ThreeJS journey notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint" : "cd ./node_modules/.bin && eslint --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtlv99/threejs-journey-notes.git"
+  },
+  "keywords": [
+    "3d",
+    "threejs",
+    "three.js"
+  ],
+  "author": "Marco León",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtlv99/threejs-journey-notes/issues"
+  },
+  "homepage": "https://github.com/mtlv99/threejs-journey-notes#readme"
+}

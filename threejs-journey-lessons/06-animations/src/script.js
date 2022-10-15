@@ -16,8 +16,8 @@ scene.add(mesh);
 
 // Sizes
 const sizes = {
-    width: 800,
-    height: 600
+  width: 800,
+  height: 600,
 };
 
 // Camera
@@ -27,7 +27,7 @@ scene.add(camera);
 
 // Renderer
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas
+  canvas,
 });
 renderer.setSize(sizes.width, sizes.height);
 
@@ -56,24 +56,23 @@ renderer.setSize(sizes.width, sizes.height);
 // Built-in ThreeJS Clock for animations.
 const clock = new THREE.Clock();
 const loopThreeJS = () => {
+  // Note: do not use getDelta from clock,
+  // it can deliver inconsistent values between getElapsedTime and getDelta.
+  const elapsedTime = clock.getElapsedTime();
 
-    // Note: do not use getDelta from clock,
-    // it can get inconsistent values between getElapsedTime and getDelta.
-    const elapsedTime = clock.getElapsedTime();
+  // Update objects
+  mesh.rotation.y = elapsedTime;
+  mesh.rotation.x = elapsedTime;
 
-    // Update objects
-    mesh.rotation.y = elapsedTime;
-    mesh.rotation.x = elapsedTime;
+  // mesh.position.x = Math.cos(elapsedTime);
+  // mesh.position.y = Math.sin(elapsedTime);
 
-    // mesh.position.x = Math.cos(elapsedTime);
-    // mesh.position.y = Math.sin(elapsedTime);
+  // camera.lookAt(mesh.position);
 
-    // camera.lookAt(mesh.position);
+  renderer.render(scene, camera);
 
-    renderer.render(scene, camera);
-
-    window.requestAnimationFrame(loopThreeJS);
-}
+  window.requestAnimationFrame(loopThreeJS);
+};
 
 // Animate using external library like gsap.
 // gsap has it's own requestAnimationFrame calls, but we still need to render each frame.
@@ -87,7 +86,7 @@ const loopThreeJS = () => {
 //     // Call tick again on the next frame
 //     window.requestAnimationFrame(loopUsingGSAP);
 // };
- 
+
 // DON'T FORGET TO CALL THE METHOD.
 // loopSimple();
 loopThreeJS();

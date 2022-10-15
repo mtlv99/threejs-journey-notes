@@ -1,3 +1,5 @@
+/* global THREE */
+
 // Global object
 console.log('Hello Three.js', THREE);
 
@@ -16,7 +18,7 @@ const geometry = new THREE.BoxGeometry(1, 1, 1);
 // What makes the geometry solid. Geometry are just coordinates of the points,
 // a material paints them?
 // https://threejs.org/docs/index.html#api/en/materials/MeshBasicMaterial
-const material = new THREE.MeshBasicMaterial({color: 0xff0000});
+const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
 
 // A mesh is composed of a geometry and a material
 // https://threejs.org/docs/index.html#api/en/objects/Mesh
@@ -26,9 +28,9 @@ scene.add(mesh);
 
 // Canvas sizes
 const sizes = {
-    width: 800,
-    height: 600,
-}
+  width: 800,
+  height: 600,
+};
 
 /* ////////////// */
 /* Creates camera */
@@ -36,7 +38,7 @@ const sizes = {
 // https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera
 // 75 = fov
 // aspect ratio = width/height
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height );
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 scene.add(camera);
 
 
@@ -47,9 +49,9 @@ scene.add(camera);
 // https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer
 const canvasRef = document.getElementById('webgl');
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvasRef,
+  canvas: canvasRef,
 
-})
+});
 // No need to provide width and height in HTML, you can do it in the renderer.
 renderer.setSize(sizes.width, sizes.height);
 

@@ -3,7 +3,7 @@ Marco's ThreeJS Journey course notes.
 
 Spanglish warning! I'll probably mix Spanish and English while taking notes.
 
-I will use this for all my ThreeJS notes from now own.
+I will use this for all my ThreeJS notes from now on.
 
 
 ## Course
