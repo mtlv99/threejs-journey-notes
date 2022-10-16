@@ -11,3 +11,8 @@ I will use this for all my ThreeJS notes from now on.
 I'm following Bruno Simon's Three JS course.
 
 More info here: https://threejs-journey.com/
+
+## Config
+- Node version: 16.13.1
+- npm version: 8.1.2
+- nvm (Windows): 1.1.9
