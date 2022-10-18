@@ -13,7 +13,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint" : "cd ./node_modules/.bin && eslint --ext .js"
+    "lint": "cd ./node_modules/.bin && eslint --ext .js"
   },
   "repository": {
     "type": "git",
